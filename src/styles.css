@@ -1,0 +1,384 @@
+:root {
+  color-scheme: light;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top, rgba(246, 203, 109, 0.35), transparent 34%),
+    linear-gradient(180deg, #fffaf1 0%, #f7efe2 45%, #f2e6d4 100%);
+  color: #2b1d13;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+  color: #2b1d13;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 64px;
+}
+
+.hero {
+  padding: 20px 0 48px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border: 1px solid rgba(103, 65, 38, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 251, 244, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7d4a27, #c38b2d);
+  color: #fff7ed;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 28px;
+  margin-top: 36px;
+  align-items: stretch;
+}
+
+.hero-copy,
+.hero-card,
+.feature-card,
+.ministry-item,
+.member-card {
+  border: 1px solid rgba(96, 59, 34, 0.12);
+  box-shadow: 0 18px 50px rgba(91, 60, 36, 0.08);
+}
+
+.hero-copy {
+  padding: 40px;
+  border-radius: 32px;
+  background: linear-gradient(160deg, rgba(255, 250, 242, 0.96), rgba(247, 235, 213, 0.88));
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a6b31;
+}
+
+.hero-copy h1,
+.section-heading h2 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  max-width: 12ch;
+}
+
+.hero-text,
+.feature-card p,
+.ministry-item p,
+.member-card p,
+.status-message,
+.hero-card p {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.7;
+  color: #5f4b3b;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: #7e4927;
+  color: #fff8f0;
+}
+
+.button-secondary {
+  background: rgba(255, 252, 247, 0.9);
+  color: #5a3724;
+  border: 1px solid rgba(94, 55, 28, 0.16);
+}
+
+.hero-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #7c4827 0%, #5b3118 100%);
+  color: #fff9f1;
+  align-self: end;
+}
+
+.hero-card p,
+.hero-card h2,
+.card-label {
+  color: inherit;
+}
+
+.hero-card h2 {
+  margin: 8px 0 16px;
+  font-size: 2rem;
+}
+
+.card-label {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.section {
+  padding: 28px 0;
+}
+
+.section-split {
+  padding-top: 10px;
+}
+
+.section-contrast {
+  padding: 34px;
+  border-radius: 32px;
+  background: rgba(255, 251, 245, 0.72);
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  max-width: 15ch;
+}
+
+.feature-grid,
+.ministry-list,
+.member-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ministry-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.member-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+}
+
+.feature-card,
+.ministry-item,
+.member-card,
+.info-panel,
+.schedule-panel {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.92);
+}
+
+.info-panel,
+.schedule-panel {
+  border: 1px solid rgba(96, 59, 34, 0.12);
+  box-shadow: 0 18px 50px rgba(91, 60, 36, 0.08);
+}
+
+.feature-card h3,
+.ministry-item h3,
+.member-card h3,
+.info-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.promise-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #5f4b3b;
+  line-height: 1.8;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(96, 59, 34, 0.12);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #5f4b3b;
+}
+
+.schedule-row:last-child {
+  border-bottom: 0;
+}
+
+.contact-strip {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 8px;
+  padding: 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(124, 72, 39, 0.95), rgba(189, 137, 53, 0.88));
+  color: #fff9f1;
+}
+
+.contact-strip .eyebrow,
+.contact-strip h2,
+.contact-strip p {
+  color: inherit;
+}
+
+.contact-strip h2 {
+  margin: 0;
+  max-width: 12ch;
+  line-height: 1.1;
+}
+
+.contact-copy {
+  max-width: 480px;
+}
+
+.contact-copy .button-primary {
+  margin-top: 12px;
+  background: #fff7ed;
+  color: #6d3f22;
+}
+
+.member-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d6a24e, #8c4f2a);
+  color: #fff7ee;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.status-message {
+  margin: 0;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 251, 245, 0.85);
+}
+
+@media (max-width: 900px) {
+  .hero-content,
+  .feature-grid,
+  .ministry-list,
+  .split-layout,
+  .contact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    border-radius: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar-links {
+    flex-wrap: wrap;
+  }
+
+  .hero-copy {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 12px;
+  }
+
+  .hero-copy h1 {
+    max-width: none;
+  }
+
+  .section-contrast {
+    padding: 22px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
